@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>ascending and descending</h1>
+<script>
+    const arr=[9,7,6,5,3,2,4,1,8];
+    // var a=[];
+    //ascending
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[j]<arr[i]){
+            let temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            }
+         }
+    }
+    for(let k=0;k<arr.length;k++){
+        document.write(arr[k]);
+    }
+    document.write('<br>')
+    //descending
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[j]>arr[i]){
+            let temp=arr[i];
+            arr[i]=arr[j];
+            arr[j]=temp;
+            }
+         }
+    }
+    for(let k=0;k<arr.length;k++){
+        document.write(arr[k]);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 300px;
+            width: 300px;
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function drag(e){
+            e.dataTransfer.setData("text",e.target.id);
+        }
+        function allowdrop(e){
+            e.preventDefault();
+        }
+        function drop(e){  
+            e.preventDefault();
+            var data=e.dataTransfer.getData("text");
+            e.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" ondragover="allowdrop(event)" ondrop="drop(event)">
+        <img src="ncitcollege.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="200px" height="200px">
+    </div>
+    <div id="div2" ondragover="allowdrop(event)" ondrop="drop(event)"></div>
+    
+</body>
+
+</html>

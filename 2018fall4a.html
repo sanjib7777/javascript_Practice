@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Element Positioning and Mouse Tracking Example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 1px solid gray;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="box" id="box1">Box 1</div>
+        <div class="box" id="box2">Box 2</div>
+    </div>
+
+    <script>
+        const container = document.getElementById("container");
+        const boxa = document.getElementById("box1");
+        const boxb = document.getElementById("box2");
+
+        container.addEventListener("mousemove", (event) => {
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            boxb.style.left = `${mouseX - 50}px`;
+            boxb.style.top = `${mouseY - 50}px`;
+        });
+        boxb.addEventListener("click", () => {
+            boxb.style.zIndex = 2;
+            boxa.style.zIndex = 1;
+        });
+
+        boxa.addEventListener("click", () => {
+            boxa.style.zIndex = 2;
+            boxb.style.zIndex = 1;
+        });
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>scope </h1>
+    <script>
+        //global scope
+        const a="i am global";
+        function example1(){
+            console.log(a)
+        }
+        //function scope
+        function example2(){
+            const b="i am local";
+            console.log(b)
+        }
+        //block scope
+        function example3(){
+            if(true){
+                b="i am block";
+                console.log(b)
+            }
+        }
+        example1();
+        example2();
+        example3();
+    </script>
+</body>
+</html>

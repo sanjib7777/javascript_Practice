@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>first letter uppercase</h1>
+    <script>
+        let text=prompt("enter any word");
+        let b=text.charAt(0);
+        let g=/[A-z]/i
+        if(b.search(g)<0){
+            document.write("first letter is not alphabet")
+        }
+        else{
+        let e=b.toUpperCase();
+        let f=text.length;
+        let a=text.slice(1,f);
+        let d=e.concat("",a);
+        document.write(d);
+        }
+    </script>
+</body>
+</html>

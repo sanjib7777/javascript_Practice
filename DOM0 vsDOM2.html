@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="A">Sanjib shah</p>
+    <button onclick="AB()">DOM 0</button>
+    <button id="b">DOM 2</button>
+    <script>
+        function AB(){
+            document.getElementById('A').innerHTML="DOM 0";
+        }
+        b.addEventListener('click',()=>{ 
+            document.getElementById('A').innerHTML="DOM 2";
+        })
+    </script>
+</body>
+</html>

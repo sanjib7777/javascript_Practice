@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1> prototype</h1>
+   <script>
+    //bracket notation
+    let b ={
+        sub:'math',
+        marks:100
+    }
+    console.log(b['sub'])
+    //prototypal inheritance
+    let a={
+        name1:"sanjib",
+        class:2
+    }
+    let p={
+        name2:"don"
+    }
+    a.__proto__=p;
+    console.log(a.name2);
+   </script>
+</body>
+</html>

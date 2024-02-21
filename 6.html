@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>var vs let vs const</h1>
+    <script>
+        //var
+
+        function example1(){
+            if(true){
+               var x=10;
+            }
+            console.log(x);
+        }
+        example1();
+        var a=5;
+        var a=20;
+        console.log(a);
+
+        //let
+
+        function example2(){
+            if(true){
+                let b=30;
+                console.log(b);
+            }
+            //console.log(b);  //error->block scope
+        }
+        example2();
+        let d=40;
+        //let d=50; error redecalration not allowed
+        console.log(d)
+
+        //const
+        function example3(){
+            if(true){
+                let e=30;
+                console.log(e);
+            }
+           // console.log(e);  //error ->block scope
+        }
+        //const f; //error must be initialzed
+        const g=10;
+        //const g=100;//error cannot be reassigned
+        console.log(g);
+    </script>
+</body>
+</html>

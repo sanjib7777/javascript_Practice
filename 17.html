@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>adding 10 each time</h1>
+    <span id="place">0</span>
+    <button  onclick="sum()">SUM</button>
+    <script>
+        let a=0;
+        let flag=1;
+        function sum(){
+            a=a+10;
+            if(flag<=10){
+            document.getElementById("place").innerHTML=a;
+            flag++;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="2021spr4b_another.html" onsubmit="return validate()">
+        Name: <input type="text" id="name" required>
+        Email: <input type="email" id="email" required>
+        contact no: <input type="text" id="phone" required>
+        <input type="submit">
+    </form>
+    <script>
+        function validate(){
+        let name=document.getElementById('name').value;
+        let email=document.getElementById('email').value;
+        let phone=document.getElementById('phone').value;
+        let regname=/[A-z\s]+/i
+        let regemail=/[A-z0-9]+\@[a-z]+\.[a-z]{2,4}/g
+        let regphone=/[0-9]{3}\-[0-9]{3}\-[0-9]{4}/g
+        if(name.search(regname)<0){
+            alert("inavlid name")
+            return false;
+        }
+        if(email.search(regemail)<0){
+            alert("inavlid emmail")
+            return false;
+        }
+        if(phone.search(regphone)<0){
+            alert("inavlid number")
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    </script>
+</body>
+</html>

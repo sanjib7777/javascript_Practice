@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Content & Stacking Elements</title>
+  <style>
+    /* Style for the stacked elements */
+    .stacked-element {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="addNewElement()">Add Element</button>
+  <div id="container">
+    <!-- Initial element -->
+    <div class="stacked-element">Element 1</div>
+  </div>
+
+  <script>
+    let counter = 1;
+
+    function addNewElement() {
+      const container = document.getElementById("container");
+
+      // Create a new element
+      const newElement = document.createElement("div");
+      newElement.className = "stacked-element";
+      newElement.textContent = "Element " + (++counter);
+
+      // Append the new element to the container
+      container.appendChild(newElement);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return validate()">
+        Name: <input type="text" id="name" required><br>
+        Phone: <input type="number" id="phone" required><br>
+        Email: <input type="email" id="email" required><br>
+        Address: <input type="text" id="address" required><br>
+        <input type="submit" value="submit">
+    </form>
+    <script>
+        function validate(){
+            const n=document.getElementById("name").value;
+            const p=document.getElementById("phone").value;
+            const e=document.getElementById("email").value;
+            const a=document.getElementById("address").value;
+
+            const ninp=/[A-z]|[a-z]/
+            const pinp=/[0-9]{10}$/
+            const einp=/[A-z]|[0-9]\@gmail.com/
+            const ainp=/[A-z]/
+             //name
+             if(n.search(ninp)<0){
+                alert("please enter valid name");
+                return false;
+             }
+             if(p.search(pinp)<0){
+                alert ("please enter valid phone");
+                return false;
+             }
+             if(e.search(einp)<0){
+                alert("please enter valid email");
+                return false;
+             }
+             if (a.search(ainp)<0){
+                alert("please enter valid address");
+                return false;
+             }
+             return true;
+        }
+    </script>
+</body>
+</html>

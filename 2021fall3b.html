@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Email:<input type="email" id="email" onkeydown="validate1()"><br>
+        <p id="merror"></p>
+        password: <input type="password" id="pass" onkeyup="validate2()"><br>
+        <p id="perror"></p>
+        <input type="submit">
+    </form>
+    <script>
+        function validate1(){
+            var e=document.getElementById('email').value;
+           
+            var rege=/[A-z0-9]+\@[a-z]+\.[a-z]{2,4}/
+            
+            if(e==""){
+                document.getElementById('merror').innerText="empty email";
+                return false
+            }
+            else if(e.search(rege)<0){
+                document.getElementById('merror').innerText="pattern doesnt match";
+                return fasle
+            }
+            else{
+                document.getElementById('merror').innerText="";
+            }
+        }
+            function validate2(){
+            var p=document.getElementById('pass').value;
+            var regp=/[A-z0-9]{8,}/
+            if(p==""){
+                document.getElementById('perror').innerText="empty password";
+                return false
+            }
+            else if(p.search(regp)<0){
+                document.getElementById('perror').innerText="pattern doesnt match";
+                return fasle
+            }
+            else{
+                document.getElementById('merror').innerText="";
+            }
+        }
+    </script>
+</body>
+</html>

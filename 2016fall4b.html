@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="2021spr4b_another.html" onsubmit="return validate()">
+        name: <input type="text" placeholder="name" id="name"><br>
+        phone: <input type="text" placeholder="phone" id="phone"><br>
+        <input type="submit">
+    </form>
+    <script>
+        function validate(){  
+        let n=document.getElementById('name').value;
+        let p=document.getElementById('phone').value;
+        let regp=/[0-9]{10}/
+        if(n=="" || p==""){
+            alert("blank field");
+            return false;
+        }
+        else if(p.match(regp)<1){
+            alert("enter 10 mnumber only ");
+            return false;
+        }
+        else{
+            return true
+        }
+        }
+    </script>
+</body>
+</html>
